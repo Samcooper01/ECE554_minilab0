@@ -9,27 +9,27 @@ input En,
 input Clr,
 input [DATA_WIDTH-1:0] Ain,
 input [DATA_WIDTH-1:0] Bin,
-output [DATA_WIDTH*3-1:0] Cout
+output logic [DATA_WIDTH*3-1:0] Cout
 );
 
-//Internal Signals
-logic [DATA_WIDTH * 2-1: 0] mult_AB;
-logic [DATA_WIDTH * 3-1: 0] mult_AB_Zext;
+    // Dot product of two arrays
+    // Result of the dot product is stored in the output register that is displayed in hex format on the 7-segment display
+    // when SW0 is turned on(en)
+    // LED1 should also turn on indicating that the logic is in the DONE state
 
-//DATA_WIDTH bit multiplier
-assign mult_AB = Ain * Bin;
+    // Output of the multiplier unit is DATA_WIDTH*2
+    logic [DATA_WIDTH*2-1:0] mult_AB;
+    assign mult_AB = Ain * Bin;
 
-//DATA_WIDTH * 2 to DATA_WIDTH * 3 zero extender
-assign mult_AB_Zext = {1'b0{DATA_WIDTH}, mult_AB};
+    // Output of the accumulator is DATA_WIDTH*3, so pad with 0's 
+    logic [DATA_WIDTH*3-1:0] mult_AB_zeroExt;
+    assign mult_AB_zeroExt ={{{DATA_WIDTH-1}{1'b0}}, mult_AB};
 
-//Accumulator
-always_ff @(posedge clk, negedge rst_n ) begin 
-    if(!rst_n) begin
-        Cout <= Clr;
+    always_ff @(posedge clk, negedge rst_n)
+    begin
+        if (!rst_n)
+            Cout <= Clr;
+        else if (En)
+            Cout <= Cout + mult_AB_zeroExt;
     end
-    else if (En) begin
-        Cout <= Cout + mult_AB_Zext;
-    end
-end
-
 endmodule
