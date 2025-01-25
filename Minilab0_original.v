@@ -75,7 +75,6 @@ genvar i;
 
 generate
   for (i=0; i<2; i=i+1) begin : fifo_gen
-	/*
     FIFO
     #(
     .DEPTH(DEPTH),
@@ -91,23 +90,13 @@ generate
     .full(full[i]),
     .empty(empty[i])
     );
-	*/
-	FIFO_ip
-	input_fifo
-	(
-		.data(datain[i]),
-		.rdclk(CLOCK_50),
-		.rdreq(rden[i]),
-		.wrclk(CLOCK_50),
-		.wrreq(wren[i]),
-		.q(dataout[i]),
-		.rdempty(empty[i]),
-		.wrfull(full[i])
-	);
   end
 endgenerate
 
-mac_ip mac
+MAC
+#(
+.DATA_WIDTH(DATA_WIDTH)
+) mac
 (
 .clk(CLOCK_50),
 .rst_n(rst_n),
