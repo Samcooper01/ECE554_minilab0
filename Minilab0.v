@@ -110,7 +110,7 @@ endgenerate
 mac_ip mac
 (
 .clk(CLOCK_50),
-.rst_n(rst_n),
+.rst_n(1'b1),
 .En(&rden),
 .Clr(1'b0),
 .Ain(dataout[0]),
