@@ -92,7 +92,7 @@ generate
     .empty(empty[i])
     );
 	*/
-	FIFO_ip
+	fifo_test_ip
 	input_fifo
 	(
 		.data(datain[i]),
@@ -110,7 +110,7 @@ endgenerate
 mac_ip mac
 (
 .clk(CLOCK_50),
-.rst_n(1'b1),
+.rst_n(rst_n),
 .En(&rden),
 .Clr(1'b0),
 .Ain(dataout[0]),
@@ -123,7 +123,7 @@ mac_ip mac
 //=======================================================
 
 assign rst_n = KEY[0];
-assign wren[0] = state == FILL;
+assign wren[0] = (state == FILL) & rst_n;
 assign wren[1] = wren[0];
 assign rden[0] = state == EXEC;
 assign rden[1] = rden[0];

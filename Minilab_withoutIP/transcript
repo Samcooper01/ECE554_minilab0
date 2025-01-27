@@ -1,0 +1,85 @@
+# Compile of fifo.sv was successful.
+# Compile of fifo_tb.sv was successful.
+# Compile of mac.sv was successful.
+# Compile of MAC_testbench.sv was successful.
+# Compile of minilab0_tb.sv was successful.
+# 5 compiles, 1 failed with no errors.
+# Compile of fifo.sv was successful.
+# Compile of fifo_tb.sv was successful.
+# Compile of mac.sv was successful.
+# Compile of MAC_testbench.sv was successful.
+# Compile of minilab0_tb.sv was successful.
+# Compile of Minilab0.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -L C:/intelFPGA_lite/23.1std/questa_fse/intel/verilog/altera_mf -L C:/intelFPGA_lite/23.1std/questa_fse/intel/verilog/220model -vopt -voptargs=+acc work.minilab0_tb
+# vsim -L C:/intelFPGA_lite/23.1std/questa_fse/intel/verilog/altera_mf -L C:/intelFPGA_lite/23.1std/questa_fse/intel/verilog/220model -vopt -voptargs="+acc" work.minilab0_tb 
+# Start time: 16:48:23 on Jan 27,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "Minilab0(fast)".
+# ** Warning: I:/ECE554/minilab0/Minilab0/Minilab0/Minilab_withoutIP/minilab0_tb.sv(23): (vopt-2685) [TFMPC] - Too few port connections for 'iDUT'.  Expected 13, found 10.
+# ** Warning: I:/ECE554/minilab0/Minilab0/Minilab0/Minilab_withoutIP/minilab0_tb.sv(23): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/ECE554/minilab0/Minilab0/Minilab0/Minilab_withoutIP/minilab0_tb.sv(23): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/ECE554/minilab0/Minilab0/Minilab0/Minilab_withoutIP/minilab0_tb.sv(23): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK2_50'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+# Loading sv_std.std
+# Loading work.minilab0_tb(fast)
+# Loading work.Minilab0(fast)
+# Loading work.FIFO(fast)
+# Loading work.MAC(fast)
+add wave -position insertpoint  \
+sim:/minilab0_tb/iDUT/DATA_WIDTH \
+sim:/minilab0_tb/iDUT/DEPTH \
+sim:/minilab0_tb/iDUT/FILL \
+sim:/minilab0_tb/iDUT/EXEC \
+sim:/minilab0_tb/iDUT/DONE \
+sim:/minilab0_tb/iDUT/HEX_0 \
+sim:/minilab0_tb/iDUT/HEX_1 \
+sim:/minilab0_tb/iDUT/HEX_2 \
+sim:/minilab0_tb/iDUT/HEX_3 \
+sim:/minilab0_tb/iDUT/HEX_4 \
+sim:/minilab0_tb/iDUT/HEX_5 \
+sim:/minilab0_tb/iDUT/HEX_6 \
+sim:/minilab0_tb/iDUT/HEX_7 \
+sim:/minilab0_tb/iDUT/HEX_8 \
+sim:/minilab0_tb/iDUT/HEX_9 \
+sim:/minilab0_tb/iDUT/HEX_10 \
+sim:/minilab0_tb/iDUT/HEX_11 \
+sim:/minilab0_tb/iDUT/HEX_12 \
+sim:/minilab0_tb/iDUT/HEX_13 \
+sim:/minilab0_tb/iDUT/HEX_14 \
+sim:/minilab0_tb/iDUT/HEX_15 \
+sim:/minilab0_tb/iDUT/OFF \
+sim:/minilab0_tb/iDUT/CLOCK2_50 \
+sim:/minilab0_tb/iDUT/CLOCK3_50 \
+sim:/minilab0_tb/iDUT/CLOCK4_50 \
+sim:/minilab0_tb/iDUT/CLOCK_50 \
+sim:/minilab0_tb/iDUT/HEX0 \
+sim:/minilab0_tb/iDUT/HEX1 \
+sim:/minilab0_tb/iDUT/HEX2 \
+sim:/minilab0_tb/iDUT/HEX3 \
+sim:/minilab0_tb/iDUT/HEX4 \
+sim:/minilab0_tb/iDUT/HEX5 \
+sim:/minilab0_tb/iDUT/LEDR \
+sim:/minilab0_tb/iDUT/KEY \
+sim:/minilab0_tb/iDUT/SW \
+sim:/minilab0_tb/iDUT/state \
+sim:/minilab0_tb/iDUT/datain \
+sim:/minilab0_tb/iDUT/result \
+sim:/minilab0_tb/iDUT/rst_n \
+sim:/minilab0_tb/iDUT/rden \
+sim:/minilab0_tb/iDUT/wren \
+sim:/minilab0_tb/iDUT/full \
+sim:/minilab0_tb/iDUT/empty \
+sim:/minilab0_tb/iDUT/dataout \
+sim:/minilab0_tb/iDUT/macout \
+sim:/minilab0_tb/iDUT/j
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: sccooper  Hostname: WIN-8112  ProcessID: 19656
+#           Attempting to use alternate WLF file "./wlft4n2exw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4n2exw
+run -all
+# ** Note: $stop    : I:/ECE554/minilab0/Minilab0/Minilab0/Minilab_withoutIP/minilab0_tb.sv(38)
+#    Time: 295 ps  Iteration: 0  Instance: /minilab0_tb
+# Break in Module minilab0_tb at I:/ECE554/minilab0/Minilab0/Minilab0/Minilab_withoutIP/minilab0_tb.sv line 38

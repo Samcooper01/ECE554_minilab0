@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at fifo.sv(28): always construct contains both blocking and non-blocking assignments File: I:/ECE554/minilab0/Minilab0/Minilab0/fifo.sv Line: 28
