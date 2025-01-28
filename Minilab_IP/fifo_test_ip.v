@@ -2,6 +2,7 @@
 // GENERATION: STANDARD
 // VERSION: WM1.0
 // MODULE: dcfifo 
+// test
 
 // ============================================================
 // File Name: fifo_test_ip.v
