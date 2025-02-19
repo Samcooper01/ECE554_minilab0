@@ -1,5 +1,7 @@
 # MAC and FIFO with 7-segment display
 
+See [ECE_554_Minilab0.pdf](ECE_554_Minilab0.pdf) for full project detials
+
 ## Project Overview
 This project involves getting started with the DE1-SoC board using Quartus. The objective is to design simple digital logic in Verilog, simulate it in QuestaSim, program the DE1-SoC board using Quartus, and utilize IPs from the Quartus IP Catalog.
 
